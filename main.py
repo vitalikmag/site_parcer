@@ -3,7 +3,7 @@ from tqdm import tqdm
 import os
 import math
 
-API_KEY = 'jOX1853BFrc31nDRzJxDF0PyI6PpR18Tsc2LkfrVwutEPQkSEQzaVog3'
+API_KEY = 'YOUR_API'
 
 
 def scrap_pexels(query=''):
