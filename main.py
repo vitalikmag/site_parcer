@@ -29,6 +29,7 @@ def scrap_pexels(query=''):
         print(f'[INFO] Images found: {image_count}. There is some time required to download')
 
         images_list_urls = []
+
         for page in range(1, math.ceil(image_count / 80) + 1):
             query_str = f'{query_str}&page={page}'
             response = requests.get(url=query_str, headers=headers)
@@ -46,7 +47,7 @@ def download_images(img_list=[], img_dir_path=''):
             with open(f'./{img_dir_path}/{item_url.split("-")[-1]}', 'wb') as file:
                 file.write(response.content)
         else:
-            print('Something go wrong during dowload')
+            print('Something go wrong during download')
 
 
 def main():
